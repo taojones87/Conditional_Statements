@@ -6,13 +6,21 @@ namespace Conditional_Statement_1
     {
         static void Main(string[] args)
         {
+            // User enters expected value of numeric grade.
+
             Console.WriteLine("What percent grade do you expect to get in this class?");
+
+            // Try/catch to account for user entering wrong format.
 
             try
             {
+                // Read the input and convert to grade variable.
+
                 string input = Console.ReadLine();
 
                 int grade = int.Parse(input);
+
+                // Display equivalent letter grade based on syllabus values.
 
                 if (grade >= 98)
                 {
@@ -69,10 +77,14 @@ namespace Conditional_Statement_1
             }
             catch
             {
+                // Catch statement alerts user to entry error and provides instructions.
+
                 Console.WriteLine("Please use an integer data type for your grade.");
                 Console.WriteLine("Press any key to exit the program and try again...");
                 Console.ReadKey(true);
             }
+            // Alert user to end of program.
+
             Console.WriteLine("Press any key to exit the program...");
             Console.ReadKey(true);
         }
